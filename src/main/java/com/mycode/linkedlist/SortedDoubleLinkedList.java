@@ -1,20 +1,22 @@
 package com.mycode.linkedlist;
-/*package com.staples.acctsvc.cams.vo.shipto;
-
-class Node {
-	int data;
-	Node prev;
-	Node next;
-
-	// Constructor to create a new node, next and prev is by default initialized as null
-	public Node(int data) {
-		this.data = data;
-	}
-}
 
 public class SortedDoubleLinkedList {
-	Node head = null; // root node - head of list
+	
+	//can declare Node class outside
+	class Node {
+		int data;
+		Node prev;
+		Node next;
 
+		// Constructor to create a new node, next and prev is by default initialized as null
+		public Node(int data) {
+			this.data = data;
+		}
+	}
+	
+	Node head = null; // root node - head of list
+	Node tail = null; 
+	
 	public static void main(String[] args) {
 		SortedDoubleLinkedList dll = new SortedDoubleLinkedList();
 
@@ -57,6 +59,7 @@ public class SortedDoubleLinkedList {
 			}
 			last.next = currNode; // Insert the currNode at last node
 			currNode.prev = last; // Make last node as previous of new node
+			tail = currNode;
 		}
 	}
 
@@ -85,4 +88,3 @@ public class SortedDoubleLinkedList {
 	}
 
 }
-*/

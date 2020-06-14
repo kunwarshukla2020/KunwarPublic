@@ -13,7 +13,8 @@ class Node {
 
 public class DoubleLinkedList {
 	Node head = null; // root node - head of list
-
+	Node tail = null; 
+	
 	public static void main(String[] args) {
 		DoubleLinkedList dll = new DoubleLinkedList();
 
@@ -30,7 +31,7 @@ public class DoubleLinkedList {
 		dll.addEnd(4);
 
 		// Insert 8, after 7. So linked list becomes 1->7->8->6->4->NULL
-		dll.InsertAfter(dll.head.next, 8);
+		dll.insertAfter(dll.head.next, 8);
 
 		dll.printlist();
 		dll.printlist(dll.head);
@@ -41,6 +42,7 @@ public class DoubleLinkedList {
 		Node currNode = new Node(data);
 		if (head == null) {
 			head = currNode; // Head and tail are same in starting
+			tail = currNode;
 		} else {
 			// Else traverse till the last node and insert the currNode there
 			Node last = head;
@@ -49,6 +51,7 @@ public class DoubleLinkedList {
 			}
 			last.next = currNode; // Insert the currNode at last node
 			currNode.prev = last; // Make last node as previous of new node
+			tail = currNode;
 		}
 	}
 
@@ -66,7 +69,7 @@ public class DoubleLinkedList {
 	}
 
 	/* Given a node as prev_node, insert a new node after the given node */
-	public void InsertAfter(Node prev_Node, int data) {
+	public void insertAfter(Node prev_Node, int data) {
 
 		/* 1. check if the given prev_node is NULL */
 		if (prev_Node == null) {
@@ -105,6 +108,13 @@ public class DoubleLinkedList {
 		while (last != null) {
 			System.out.print(last.data + " ");
 			last = last.prev;
+		}
+		
+		System.out.print("\nTraversal in reverse direction using tail: ");
+		Node last1 = tail;
+		while (last1 != null) {
+			System.out.print(last1.data + " ");
+			last1 = last1.prev;
 		}
 	}
 

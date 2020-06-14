@@ -144,6 +144,7 @@ class SingleLinkedList {
 		currNode.data = currNode.next.data;
 		currNode.next = currNode.next.next;
 	}
+	
 	//same output as above-by kunwar
 	// Actually, not deleting but Copying next node to current node
 	private void removeNodeAtCertainIndex(int i) {
