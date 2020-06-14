@@ -36,6 +36,12 @@ public class DoubleLinkedList {
 		dll.printlist();
 		dll.printlist(dll.head);
 	}
+	
+	/*OUTPUT-->
+	Travel forward only: 1 7 8 6 4
+	Traversal in forward Direction: 1 7 8 6 4 
+	Traversal in reverse direction: 4 6 8 7 1 
+	Traversal in reverse direction using tail: 4 6 8 7 1 */
 
 	// ADD NODE at the end of the list
 	public void addEnd(int data) {
