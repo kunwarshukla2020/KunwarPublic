@@ -12,19 +12,19 @@ class Node1 {
 	}
 }
 
-class BinaryTreeImpl {
+class BinaryTreeBasic {
 	Node1 root;
 
-	BinaryTreeImpl() {
+	BinaryTreeBasic() {
 		root = null;
 	}
 
-	BinaryTreeImpl(int key) {
+	BinaryTreeBasic(int key) {
 		root = new Node1(key);
 	}
 
 	public static void main(String[] args) {
-		BinaryTreeImpl bt = new BinaryTreeImpl();
+		BinaryTreeBasic bt = new BinaryTreeBasic();
 		
 		bt.root = new Node1(1); //create root
 		/*    1 

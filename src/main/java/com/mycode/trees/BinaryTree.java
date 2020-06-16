@@ -34,17 +34,31 @@ class BinaryTree {
 		bt.add(5);
 		bt.add(7);
 		bt.add(9);
+		System.out.print("InOrder:");
 		bt.traverseInOrder(bt.root);
-		System.out.println();
+		System.out.print("\nPreOrder:");
 		bt.traversePreOrder(bt.root);
-		System.out.println();
+		System.out.print("\nPostOrder:");
 		bt.traversePostOrder(bt.root);
-		System.out.println();
+		System.out.print("\nBFS:");
 		bt.traverseLevelOrder();
-		System.out.println();
+		System.out.print("\nBFS1:");
 		bt.traverseLevelOrder1();
 	}
 
+    /*		6 
+	      /   \ 
+	     4      8 
+	   /  \    /  \ 
+	  3    5  7    9    
+	
+	OUTPUT-
+	InOrder: 3 4 5 6 7 8 9
+	PreOrder: 6 4 3 5 8 7 9
+	PostOrder: 3 5 4 7 9 8 6
+	BFS: 6 4 8 3 5 7 9
+	BFS1:6 4 8 3 5 7 9 */
+	 
 	// Inserting Elements
 	public void add(int value) {
 		root = addRecursive(root, value);
