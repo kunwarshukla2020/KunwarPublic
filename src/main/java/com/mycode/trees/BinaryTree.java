@@ -15,15 +15,15 @@ class Node {
 }
 
 class BinaryTree {
-	Node root;
+	Node root = null;
 
-	BinaryTree() {
+	/*BinaryTree() {
 		root = null;
 	}
 
 	BinaryTree(int key) {
 		root = new Node(key);
-	}
+	}*/
 
 	public static void main(String[] args) {
 		BinaryTree bt = new BinaryTree();
@@ -53,9 +53,9 @@ class BinaryTree {
 	  3    5  7    9    
 	
 	OUTPUT-
-	InOrder: 3 4 5 6 7 8 9
-	PreOrder: 6 4 3 5 8 7 9
-	PostOrder: 3 5 4 7 9 8 6
+	InOrder(Left, Root, Right): 3 4 5 6 7 8 9 
+	PreOrder(Root, Left, Right): 6 4 3 5 8 7 9
+	PostOrder(Left, Right, Root): 3 5 4 7 9 8 6
 	BFS: 6 4 8 3 5 7 9
 	BFS1:6 4 8 3 5 7 9 */
 	 
