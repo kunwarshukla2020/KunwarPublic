@@ -14,7 +14,7 @@ class SingleLinkedList {
 	
 	Node head = null; // root node - head of list
 	Node tail = null;
-
+	
 	public static void main(String[] args) {
 		SingleLinkedList listImpl = new SingleLinkedList();
 		listImpl.add(10); // Add node
@@ -29,6 +29,23 @@ class SingleLinkedList {
 		listImpl.printLinkedList();
 		listImpl.removeNodeAtCertainIndex(2);
 		listImpl.printLinkedList();
+		listImpl.reverse();
+		System.out.print("\nafter reversal:");
+		listImpl.printLinkedList();
+	}
+
+	//1 2 3 4
+	private void reverse() {
+		Node currNode = head;
+		Node prev = null;
+		Node next = null;
+		while (currNode != null) {
+			next = currNode.next;
+			currNode.next = prev;
+			prev = currNode;
+			currNode = next;
+		}
+		head = prev;
 	}
 
 	// ADD NODE at the end of the current list

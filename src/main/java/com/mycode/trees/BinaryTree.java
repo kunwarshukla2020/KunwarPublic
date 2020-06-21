@@ -44,9 +44,11 @@ class BinaryTree {
 		bt.traverseLevelOrder();
 		System.out.print("\nBFS1:");
 		bt.traverseLevelOrder1();
+		System.out.println("\nSpiral order:");
+		bt.spiralOrder(bt.root);
 	}
 
-    /*		6 
+	/*		6 
 	      /   \ 
 	     4      8 
 	   /  \    /  \ 
@@ -58,7 +60,55 @@ class BinaryTree {
 	PostOrder(Left, Right, Root): 3 5 4 7 9 8 6
 	BFS: 6 4 8 3 5 7 9
 	BFS1:6 4 8 3 5 7 9 */
+	
 	 
+    private void spiralOrder(Node root)  
+    {  
+      
+    	LinkedList<Node> ls = new LinkedList<Node>();  
+      
+        // Push root  
+        ls.addLast(root);  
+      
+        // Direction 0 shows print right to left  
+        // and for Direction 1 left to right  
+        int dir = 0;  
+        while (ls.size() > 0)  
+        {  
+            int size = ls.size();  
+            while (size-->0) 
+            {  
+                // One whole level  
+                // will be print in this loop  
+      
+                if (dir == 0)  
+                {  
+                    Node temp = ls.peekLast();  
+                    ls.pollLast();  
+                    if (temp.right != null)  
+                        ls.addFirst(temp.right);  
+                    if (temp.left != null)  
+                        ls.addFirst(temp.left);  
+                    System.out.print(temp.value + " ");  
+                }  
+                else 
+                {  
+                    Node temp = ls.peekFirst(); 
+                    ls.pollFirst();  
+                    if (temp.left != null)  
+                        ls.addLast(temp.left);  
+                    if (temp.right != null)  
+                        ls.addLast(temp.right);  
+                    System.out.print(temp.value + " ");  
+                }  
+            } 
+            System.out.println(); 
+              
+            // Direction change  
+            dir = 1 - dir;  
+        }  
+    } 
+
 	// Inserting Elements
 	public void add(int value) {
 		root = addRecursive(root, value);
@@ -115,21 +165,16 @@ class BinaryTree {
 			return;
 		}
 
-		LinkedList<Node> nodes = new LinkedList<>();
-		nodes.add(root);
-
-		while (!nodes.isEmpty()) {
-
-			Node node = nodes.remove();
-
+		LinkedList<Node> ls = new LinkedList<>();
+		ls.add(root);
+		while (!ls.isEmpty()) {
+			Node node = ls.remove();
 			System.out.print(" " + node.value);
-
 			if (node.left != null) {
-				nodes.add(node.left);
+				ls.add(node.left);
 			}
-
 			if (node.right != null) {
-				nodes.add(node.right);
+				ls.add(node.right);
 			}
 		}
 	}
