@@ -13,6 +13,7 @@ class ValidParenthese {
 		//System.out.println(Test1.CheckParentesis(str));
 		ValidParenthese.longestSubstring();
 	}
+	
 
 	public static boolean CheckParentesis(String str) {
 		if (str.isEmpty())
