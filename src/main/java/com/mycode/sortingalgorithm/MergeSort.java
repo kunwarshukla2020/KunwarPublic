@@ -1,6 +1,8 @@
 package com.mycode.sortingalgorithm;
 
 //https://www.youtube.com/watch?v=yv6svAfoYik
+// check quick sort too - https://www.youtube.com/watch?v=Fiot5yuwPAg
+// ALso check for -Counting Sort Algorithm
 class MergeSort {
 
 	// 26341
@@ -22,7 +24,7 @@ class MergeSort {
 		}
 
 	}
-
+	//Recursion
 	private int[] sort(int[] a) {
 		if (a != null && a.length <= 1) {
 			return a;

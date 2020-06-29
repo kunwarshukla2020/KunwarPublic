@@ -25,7 +25,7 @@ interface TestShow {
 
 //https://www.tutorialspoint.com/java8/java8_lambda_expressions.htm
 
-public class MyClass {
+public class FunctionalInterface1 {
 
 	public static void main(String[] args) {
 
