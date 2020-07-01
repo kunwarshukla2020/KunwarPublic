@@ -1,5 +1,8 @@
 package com.mycode.practice;
 
+/**
+ *  Three questions here, uncomment method and check
+ */
 public class PracticeArray {
 	public static void main(String[] args) {
 		PracticeArray pa = new PracticeArray();

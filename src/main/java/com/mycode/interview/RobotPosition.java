@@ -4,19 +4,19 @@ package com.mycode.interview;
 //https://www.geeksforgeeks.org/check-if-a-given-sequence-of-moves-for-a-robot-is-circular-or-not/
 //Asked in chewy
 //assuming starting position is 00
-//		 N
-//		 |
-//		 |
+//		  N
+//		  |
+//		  |
 //W -------------- E
-//		 |
-//		 |
-//		 S 
+//		  |
+//		  |
+//		  S 
 public class RobotPosition {
 
 	public static void main(String[] args) {
 		String path = "GLGLGLG";
-		String cm;
-		String cd = "N";
+		String cm; //current move
+		String cd = "N"; //current direction
 		int x = 0;
 		int y = 0;
 
