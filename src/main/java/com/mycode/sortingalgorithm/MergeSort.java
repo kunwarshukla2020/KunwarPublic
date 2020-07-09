@@ -11,12 +11,51 @@ class MergeSort {
 	// 2 6 1 3 4
 	public static void main(String[] args) {
 		MergeSort m = new MergeSort();
-		int a[] = { 2, 6, 3, 4, 1 };
+		/*int a[] = { 2, 6, 3, 4, 1 };
 		m.display(a);
 		a = m.sort(a);
 		System.out.print("After sorting: ");
-		m.display(a);
+		m.display(a);*/
+		
+		int [] arr = { 3, 4, 2, 5, 1};
+		System.out.print(m.lilysHomework(arr));
 	}
+	
+	static int lilysHomework(int[] arr) {
+        int n = arr.length;
+        if(arr == null || n==0){
+            return 0;
+        }
+        int c1 = 0;
+        
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1; j++) {
+                if (arr[i] > arr[j]) {
+                    c1++;
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println(c1);
+        int c2 = 0;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1; j++) {
+                if (arr[i] < arr[j]) {
+                    c2++;
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println(c2);
+        return c2;
+
+    }
 
 	private void display(int[] a) {
 		for (int i : a) {

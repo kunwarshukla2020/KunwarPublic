@@ -1,5 +1,6 @@
 package com.mycode.designpattern;
 
+// Mobile charger can return say 120V,12V,3V
 interface SocketAdapter {
 	public Volt get120Volt();
 	public Volt get12Volt();

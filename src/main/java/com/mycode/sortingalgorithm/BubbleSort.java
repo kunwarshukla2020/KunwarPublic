@@ -23,8 +23,8 @@ class BubbleSort {
 	}
 
 	// Greater element move to right
-	// 5 8 1 6 9 2
-	// 5 1 8 6 2 9
+	// 5 8 1 6 9 2 --> compare adjacent items 5 8 and then 8 1, bigger will bubble to right
+	// 5 1 8 6 2 9 
 	// 5 1 6 8 2 9
 	// ..
 	private void sort(int[] arr) {

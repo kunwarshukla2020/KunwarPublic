@@ -1,8 +1,8 @@
 package com.mycode.utility;
 
-public class CommonUtility {
+public class Utility {
 
-	private CommonUtility() {
+	private Utility() {
 		/* Non-instantiable class */ }
 
 	public static void display(String[] a) {
@@ -10,6 +10,7 @@ public class CommonUtility {
 		for (String i : a) {
 			System.out.print(i + " ");
 		}
+		System.out.println("");
 	}
 
 	public static void display(int[] a) {
@@ -17,6 +18,7 @@ public class CommonUtility {
 		for (int i : a) {
 			System.out.print(i + " ");
 		}
+		System.out.println("");
 	}
 
 	public static void display(char[] a) {
@@ -24,5 +26,14 @@ public class CommonUtility {
 		for (char i : a) {
 			System.out.print(i + " ");
 		}
+		System.out.println("");
+	}
+
+	public static void display(Integer[] a) {
+		System.out.print("int array:");
+		for (Integer i : a) {
+			System.out.print(i + " ");
+		}
+		System.out.println("");
 	}
 }

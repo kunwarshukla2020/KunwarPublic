@@ -37,8 +37,8 @@ class LandFactory implements AnimalFactory {
 //Client
 class AbstractFactory {
 	public static void main(String args[]) {
-		AnimalFactory animalFactory = createAnimalFactory("water");
-		Animal animal = animalFactory.createAnimal();
+		AnimalFactory animalFactory = createAnimalFactory("water");//First create water animal
+		Animal animal = animalFactory.createAnimal(); //what animal in water to be created
 		animal.breathe();
 	}
 
