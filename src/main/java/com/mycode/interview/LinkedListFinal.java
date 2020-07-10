@@ -11,12 +11,12 @@ class Node1 {
 
 	public Node1(long data, Node1 n) {
 		this.data = data;
-		this.next = n; // optional as by default its null
+		this.next = n;
 	}
 
 	public Node1(long data) {
 		this.data = data;
-		this.next = null; // optional as by default its null
+		this.next = null;
 	}
 }
 
@@ -35,6 +35,32 @@ class LinkedListFinal {
 		printLinkedList(n1);
 		Node1 n = insert(n1, 6l);
 		printLinkedList(n);
+		Node1 new1 = insert1(n1, 6l);
+		printLinkedList(new1);
+	}
+
+	// another difficult way
+	private static Node1 insert1(Node1 n1, long l) {
+		Node1 currNode = n1;
+		Node1 cloneHead = null;
+		Node1 prevNode = null;
+		Node1 newNode = null;
+		while (currNode != null) {
+			newNode = new Node1(currNode.data, prevNode);
+			if (currNode != null && currNode.data < l) {
+				if (cloneHead == null) {
+					cloneHead = newNode;
+					prevNode = newNode;
+				} else {
+					prevNode = newNode;
+				}
+			} else {
+				newNode = new Node1(l, prevNode);
+				newNode = new Node1(currNode.data, newNode);
+			}
+			currNode = currNode.next;
+		}
+		return newNode;
 	}
 
 	public static Node1 insert(Node1 head, long data) {
@@ -50,12 +76,12 @@ class LinkedListFinal {
 			currNode = currNode.next;
 		}
 		al.add(data);
-		//t = (TreeSet<Integer>) t.descendingSet();
+		// t = (TreeSet<Integer>) t.descendingSet();
 		Collections.sort(al);
 		Collections.reverse(al);
 		System.out.println(al);
 		Node1 n = null;
-		for(long i : al) {
+		for (long i : al) {
 			n = new Node1(i, n);
 		}
 		// newListNode.next = currNode.next;
