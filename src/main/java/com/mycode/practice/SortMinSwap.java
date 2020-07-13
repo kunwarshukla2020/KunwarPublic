@@ -3,8 +3,8 @@ package com.mycode.practice;
 import com.mycode.utility.Utility;
 
 //https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
-
 // THIS IS DIFF - https://www.hackerrank.com/challenges/lilys-homework/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+// NOTE - YOU can use the same logic of lilys-homework here as well. Remember that technique as described in LilysHomework.java
 class SortMinSwap {
 
 	public static void main(String[] args) {
