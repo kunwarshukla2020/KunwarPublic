@@ -1,13 +1,12 @@
 package com.mycode.practice;
 
 /**
- *  Three questions here, uncomment method and check
+ * Three questions here, uncomment method and check
  */
 public class PracticeArray {
 	public static void main(String[] args) {
-		PracticeArray pa = new PracticeArray();
-		// hourglassSum();
-		// minimumBribes();
+		hourglassSum();
+		minimumBribes();
 		validBinaryString();
 	}
 
@@ -15,7 +14,7 @@ public class PracticeArray {
 	private static void validBinaryString() {
 		// String s = "00100";//c=2
 		String s = "0001"; // c=1
-		//String s = "1001000010"; d=3// ans should be 1
+		// String s = "1001000010"; d=3// ans should be 1
 		int d = 2;
 		int c = 0;
 		String[] stringArr = new String[s.length()];

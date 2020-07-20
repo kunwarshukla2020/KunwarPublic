@@ -1,6 +1,6 @@
 package com.mycode.linkedlist;
 
-//Clone of node
+//Clone of node- very important- remember it
 class SingleLinkedListClone {
 	class Node {
 		int data;

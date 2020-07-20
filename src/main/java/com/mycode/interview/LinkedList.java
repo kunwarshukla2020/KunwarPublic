@@ -3,7 +3,7 @@ package com.mycode.interview;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-//Amazon - create duplicate list- Good question
+//Amazon - create duplicate list- Good question having random that points to some random element. Plz note when you clone then at that time random node(that random points to) may not exist.
 //https://www.geeksforgeeks.org/clone-linked-list-next-arbit-pointer-set-2/
 class Node {
 	String data;

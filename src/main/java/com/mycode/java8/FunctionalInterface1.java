@@ -1,6 +1,7 @@
-package com.mycode.practice;
+package com.mycode.java8;
 
-// A functional interface is basically an interface with a single abstract method. This kind of interfaces are also known as SAM (Single Abstract Method) types
+// A functional interface is basically an interface with a single abstract method.
+// This kind of interfaces are also known as SAM (Single Abstract Method) types
 @FunctionalInterface
 interface AdderInterface {
 	int addNumbers(int a, int b);
@@ -30,7 +31,7 @@ public class FunctionalInterface1 {
 	public static void main(String[] args) {
 
 		AdderInterface obj = (a, b)->  a+b;  // first defining what the implementing interface method will do
-		int result = obj.addNumbers(4, 4); 	//calling above interface method in this line, interface should be FunctionalInterface
+		int result = obj.addNumbers(4, 4); 	 // calling above interface method in this line, interface should be FunctionalInterface
 		System.out.println("result---->> "+result);
 
 		SubtractInterface obj1 = (int a, int b) -> a-b;
