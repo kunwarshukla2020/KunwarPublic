@@ -27,6 +27,7 @@ public class LongestSubstring {
 					set.add(s1);
 					longestString = longestString + s1;
 					// System.out.println("longestString: "+longestString);
+					 //System.out.println("set: "+set); i think longestString is not required
 				} else {
 					if (longestString.length() > resultString.length()) {
 						resultString = longestString;
