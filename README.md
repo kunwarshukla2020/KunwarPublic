@@ -1,8 +1,8 @@
 # Kunwar-code
 To View this code share url - 
-https://github.com/kunwarshukla2020/KunwarPublic
+https://github.com/kunwarshukla2020/KunwarPublic/tree/master/src/main/java/com/mycode
 
-Access is set to Public so others can edit this code.
+Please note cccess is set to Public so others can edit this code.
 
 java code
 SSH key is added from staples laptop.
