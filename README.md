@@ -1,9 +1,6 @@
-There are 3 repositories KunwarPrivate(this requires authentication to access), KunwarPublic(No authentication required), KunwarQA.
-<br /> The default branch name in all repo is set to master.
-
-To View this code can share url - 
-```https://github.com/kunwarshukla2020/KunwarPublic/tree/master/src/main/java/com/mycode```
-Please note access is set to Public so others can edit this code.
+To View this KunwarPublic code can share URL:```https://github.com/kunwarshukla2020/KunwarPublic/tree/master/src/main/java/com/mycode```
+<br />The default branch name in all repo is set to master.
+<br />Please note access is set to Public so others can edit this code.
 
 ## To Import KunwarPublic in Local
 **Option 1:** File > Import > Git > GitHub Task Repositories > Enter user credentials.
